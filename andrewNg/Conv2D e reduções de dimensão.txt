@@ -1,0 +1,11 @@
+Conv2D:
+
+Para kernel /filtro 3x3 com stride 3 e padding=valid (sem padding), TEMOS:
+
+ - redução de 2 pixels em x e 2 pixels em y
+
+Para kernel 5x5 com stride 5 e paddin=valid, TEMOS:
+
+	- redução de 4 pixels em x e y
+
+Usar model.summary() para ver os outputs à medida que monta o modelo.

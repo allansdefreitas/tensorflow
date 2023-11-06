@@ -1,0 +1,29 @@
+Conv2D ============================================================================
+Para kernel /filtro 3x3 com stride 3 e padding=valid (sem padding), TEMOS:
+
+ - redução de 2 pixels em x e 2 pixels em y
+
+Para kernel 5x5 com stride 5 e paddin=valid, TEMOS:
+
+	- redução de 4 pixels em x e y
+	
+
+MaxPool2D ============================================================================
+
+Para kernel 2x2 com stride 2, TEMOS:
+	- redução das dimensões da imagem pela metade. 
+		Ex 1.: 26x26x3 -> 13x13x3
+		Ex 2.: 11x11x64 -> 5x5x64 (Arredondamento para baixo - Rounding Down)	
+		
+		
+		
+Conv2DTranspose ============================================================================
+
+	Para kernel 2x2, stride 2, padding=valid (s/ padding), TEMOS:
+		- Aumento das dimensões da imagem pelo dobro
+			Ex1.: 28x28x3 -> 56x56x3
+
+new_rows = ((rows - 1) * strides[0] + kernel_size[0] - 2 * padding[0] +
+output_padding[0])
+new_cols = ((cols - 1) * strides[1] + kernel_size[1] - 2 * padding[1] +
+output_padding[1])
